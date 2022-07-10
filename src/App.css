@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap');
+
+html {
+  background-color: #5f92ffad;
+  height: 1500px;
+}
+.main-container {
+  position: fixed;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)), rgba(0, 0, 0, 0.55) url(images/3YOpz5.jpeg); */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 500;
+  border-bottom: 4px solid #5f91ff;
+  position: fixed;
+  box-shadow: 0 2px 15px #699bff;
+}
+
+.link {
+  align-items: center;
+  font-size: 1.5rem;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Righteous', cursive;
+}
+
+.link-container {
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  color: white;
+  font-size: 35px;
+  padding-right: 5px;
+  font-family: 'Josefin Slab', serif;
+}

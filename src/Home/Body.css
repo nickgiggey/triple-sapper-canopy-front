@@ -1,0 +1,34 @@
+.pic-container {
+    width: 80vmin;
+    display: flex;
+    flex-direction: column;
+    background-clip: content-box;
+    margin-top: 10px;
+}
+
+.pic {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    box-shadow: 1px 1px 10px lightgrey;
+}
+
+.pic-container-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic-header {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.pic-explanation {
+    font-size: 1rem;
+    background-color: #ffffffbf;
+    background-clip: content-box;
+    padding: 10px;
+    box-shadow: 1px 1px 8px lightgrey;
+    width: 85%;
+}
