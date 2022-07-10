@@ -1,13 +1,15 @@
 import React from 'react';
 import '../Utilities/reset.css';
-import './Link3.css'
+import './Link3.css';
 
-function Link(props) {
+function Link3(props) {
     return (
-        <div>
-            Hello from Link3
+        <div className="home-container">
+            <section className="home-section">
+                Hello from Link3
+            </section>
         </div>
     );
 }
 
-export default Link;
+export default Link3;

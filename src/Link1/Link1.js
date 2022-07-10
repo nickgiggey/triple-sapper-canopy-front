@@ -2,12 +2,14 @@ import React from 'react';
 import '../Utilities/reset.css';
 import './Link1.css';
 
-function Link(props) {
+function Link1(props) {
     return (
-        <div>
-            Hello from Link1
+        <div className="home-container">
+            <section className="home-section">
+                Hello from Link1
+            </section>
         </div>
     );
 }
 
-export default Link;
+export default Link1;

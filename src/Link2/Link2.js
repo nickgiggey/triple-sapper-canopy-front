@@ -1,13 +1,15 @@
 import React from 'react';
 import '../Utilities/reset.css';
-import './Link2.css'
+import './Link2.css';
 
-function Link(props) {
+function Link2(props) {
     return (
-        <div>
-            Hello from Link2
+        <div className="home-container">
+            <section className="home-section">
+                Hello from Link2
+            </section>
         </div>
     );
 }
 
-export default Link;
+export default Link2;

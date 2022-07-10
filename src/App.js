@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './Home/Home';
+import Home from './Home/HomeContainer';
 import Body from './Home/Body';
 import Link1 from './Link1/Link1'
 import Link2 from './Link2/Link2'
@@ -13,7 +13,7 @@ function App() {
       <nav className="nav-container">
         <div className="logo-container">
           <Link to='/'>
-            <h1 className="logo-title">ZET</h1>
+            <h1 className="logo-title">Welcome to ZET Hotel</h1>
           </Link>
           <Link to='/'>
             {/* <img src={logo} alt='' style={logoStyle} /> */}
