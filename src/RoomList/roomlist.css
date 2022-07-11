@@ -10,19 +10,37 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     height: 1500px;
     align-items: center;
     padding: 5px;
     font-size: 5rem;
-    color: grey;
     font-family: 'Cinzel', serif;
 }
 
-.home-section2 {
-    display: flex; 
-    flex-direction: column;
-    padding-top: 100px;
-    align-items: center;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: auto;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+.available {
+    background-color: green;
+}
+
+.occupied {
+    background-color: red;
 }
