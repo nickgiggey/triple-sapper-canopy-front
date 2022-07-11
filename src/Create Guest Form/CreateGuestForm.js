@@ -1,32 +1,34 @@
 import { useState } from 'react';
 import './CreateGuestForm.css';
-
+import axios from 'axios';
 
 function CreateGuestForm(props) {
+	const initialFormState = {
+		Name: '',
+		email: '',
+		partySize: 0,
+	};
 
-    const initialFormState = {
-				Name: '',
-				email: '',
-                partySize: 0,
-			};
-
+	const [currentFormState, setCurrentFormState] = useState(initialFormState);
 	const [formState, setFormState] = useState(initialFormState);
 
 	function handleChange(event) {
-		setFormState({ ...formState, [event.target.id]: event.target.value });
+		setCurrentFormState({
+			...currentFormState,
+			[event.target.id]: event.target.value,
+		});
 	}
-    function handleSubmit(event) {
-			event.preventDefault();
-			console.log('you clicked me');
-			console.log(formState);
-			setFormState(formState);
-            
-		}
+	function handleSubmit(event) {
+		event.preventDefault();
+		setCurrentFormState(currentFormState);
+		setFormState({ ...formState, ...currentFormState });
+		setCurrentFormState(initialFormState);
+	}
 	return (
 		<div className='Form-Page-Container'>
 			<div className='Form-container'>
 				<form className='guest-form' onSubmit={handleSubmit}>
-					<label className='form-label' htmlFor='guest-name'>
+					<label className='form-label' htmlFor='Name'>
 						Guest Name:
 					</label>
 					<input
@@ -34,11 +36,11 @@ function CreateGuestForm(props) {
 						type='text'
 						placeholder='Full Name'
 						id='Name'
-						value={formState.Name}
+						value={currentFormState.Name}
 						onChange={handleChange}
 						required
 					/>
-					<label className='form-label' htmlFor='guest-email'>
+					<label className='form-label' htmlFor='email'>
 						Guest Email:
 					</label>
 					<input
@@ -46,11 +48,11 @@ function CreateGuestForm(props) {
 						type='email'
 						id='email'
 						placeholder='Email'
-						value={formState.email}
+						value={currentFormState.email}
 						onChange={handleChange}
 						required
 					/>
-					<label className='form-label' htmlFor='guest-party-size'>
+					<label className='form-label' htmlFor='partySize'>
 						Guest Party size:
 					</label>
 					<input
@@ -59,7 +61,7 @@ function CreateGuestForm(props) {
 						id='partySize'
 						min={0}
 						max={6}
-						value={formState.partySize}
+						value={currentFormState.partySize}
 						placeholder='# of guests'
 						onChange={handleChange}
 						required
