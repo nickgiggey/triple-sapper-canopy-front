@@ -2,10 +2,10 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Home/HomeContainer';
 import Body from './Home/Body';
 import CreateGuestForm from './Create Guest Form/CreateGuestForm';
-import Link1 from './Create Guest Form/Link1';
 import RoomList from './RoomList/RoomList';
 import NotFound from './Utilities/NotFound';
 import Guest from './Guest/Guest';
+import GuestRender from './Guest/GuestRender';
 import './Utilities/reset.css';
 import './App.css';
 import AvailableRoomList from './AvailableRooms/AvailableRoomList';
@@ -45,6 +45,7 @@ function App() {
 						element={<AvailableRoomList />}
 					/>
 					<Route path='/guestlist' element={<Guest />} />
+					<Route path='/guestlist/:id' element={<GuestRender />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</main>

@@ -33,7 +33,9 @@
     justify-content: space-around;
     align-content: space-around;
     margin-top: 5%;
-    width: 1200px;
+    width: 100vw;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .guest-list{
@@ -41,7 +43,7 @@
     justify-content: center;
     line-height: 110%;
     width: 250px;
-    height: 100px;
+    height: 125px;
     font-size: 25%;
     padding: 5px;
     margin: 3% auto;
@@ -55,4 +57,17 @@
     font-size: 75%;
     font-weight: bold;
     color: rgb(110, 54, 54);
+}
+
+.guest-button{
+    margin-top: 3%;
+    margin-left: 70%;
+    padding: 3%;
+    background-color: rgb(247, 234, 218, 0);
+    border-radius: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(126, 69, 69);
+    border-width: 3px;
+    font-weight: bold;
+
 }
