@@ -1,16 +1,15 @@
 import { useState } from 'react';
-
 import './CreateGuestForm.css';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function CreateGuestForm(props) {
 	const initialFormState = {
-		Name: '',
+		name: '',
 		email: '',
 		partySize: 0,
 	};
-
+	const navigate = useNavigate();
 	const [currentFormState, setCurrentFormState] = useState(initialFormState);
 
 	function handleChange(event) {
@@ -19,6 +18,7 @@ function CreateGuestForm(props) {
 			[event.target.id]: event.target.value,
 		});
 	}
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		await setCurrentFormState(currentFormState);
@@ -27,9 +27,12 @@ function CreateGuestForm(props) {
 				'http://localhost:1337/api/guests',
 				currentFormState
 			);
+			const guestId = response.data._id;
+			
 			setCurrentFormState(initialFormState);
-			if (response.status === 201) {
-				Navigate('/availablerooms');
+
+			if (response.status === 200) {
+				navigate(`/guestforms/${guestId}/availablerooms`);
 			}
 		} catch (error) {
 			console.log(error);
@@ -39,15 +42,15 @@ function CreateGuestForm(props) {
 		<div className='Form-Page-Container'>
 			<div className='Form-container'>
 				<form className='guest-form' onSubmit={handleSubmit}>
-					<label className='form-label' htmlFor='Name'>
+					<label className='form-label' htmlFor='name'>
 						Guest Name:
 					</label>
 					<input
 						className='form-input'
 						type='text'
 						placeholder='Full Name'
-						id='Name'
-						value={currentFormState.Name}
+						id='name'
+						value={currentFormState.name}
 						onChange={handleChange}
 						required
 					/>

@@ -10,7 +10,6 @@ import './Utilities/reset.css';
 import './App.css';
 import AvailableRoomList from './AvailableRooms/AvailableRoomList';
 
-
 function App() {
 	return (
 		<section className='main-container'>
@@ -41,7 +40,10 @@ function App() {
 					<Route path='/body' element={<Body />} />
 					<Route path='/guestform' element={<CreateGuestForm />} />
 					<Route path='/roomlist' element={<RoomList />} />
-					<Route path='/availablerooms' element={<AvailableRoomList />} />
+					<Route
+						path='/guestforms/:guestId/availablerooms'
+						element={<AvailableRoomList />}
+					/>
 					<Route path='/guestlist' element={<Guest />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
