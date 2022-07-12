@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Rhyley Hull",
+		"email": "first@firstmail.com"
+	},
+	{
+		"id": 2,
+		"name": "Fern Whittaker",
+		"email": "second@secondmail.com"
+	},
+	{
+		"id": 3,
+		"name": "Douglas Heaton",
+		"email": "third@thirdmail.com"
+	},
+	{
+		"id": 4,
+		"name": "Ailsa Corrigan",
+		"email": "fourth@fourthmail.com"
+	},
+	{
+		"id": 5,
+		"name": "Sinead Workman",
+		"email": "fifth@fifthmail.com"
+	},
+	{
+		"id": 6,
+		"name": "Bertie Rayner",
+		"email": "sixth@sixthmail.com"
+	}
+]
