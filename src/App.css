@@ -54,7 +54,7 @@ html {
 }
 
 .main-container {
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: lightblue;
   height: 100%;

@@ -1,10 +1,11 @@
-import React from 'react';
 import '../Utilities/reset.css';
 import './Guest.css';
+import { useNavigate } from 'react-router-dom';
 import guestSeed from '../guestSeed.json';
 import AvailableRoomList from '../AvailableRooms/AvailableRoomList';
 function Guest(props) {
 	const guestList = guestSeed;
+	const navigate = useNavigate();
 
 	return (
 		<div className='home-container3'>
@@ -17,6 +18,13 @@ function Guest(props) {
 							<p className='guest-id'>guest-id: {item.id}</p>
 							<p>{item.name}</p>
 							<p>{item.email}</p>
+							<button
+								className='guest-button'
+								onClick={() => {
+									navigate(`/guestlist/${item.id}`);
+								}}>
+								Expand
+							</button>
 						</li>
 					);
 				})}
