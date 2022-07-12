@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import './CreateGuestForm.css';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 function CreateGuestForm(props) {
 	const initialFormState = {
@@ -11,7 +12,7 @@ function CreateGuestForm(props) {
 	};
 
 	const [currentFormState, setCurrentFormState] = useState(initialFormState);
-	const [formState, setFormState] = useState(initialFormState);
+	
 
 	function handleChange(event) {
 		setCurrentFormState({
@@ -19,11 +20,20 @@ function CreateGuestForm(props) {
 			[event.target.id]: event.target.value,
 		});
 	}
-	function handleSubmit(event) {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
-		setCurrentFormState(currentFormState);
-		setFormState({ ...formState, ...currentFormState });
+		await setCurrentFormState(currentFormState);
+		try{
+			const response = await axios.post('http://localhost:1337/api/guests',currentFormState);
 		setCurrentFormState(initialFormState);
+		if (response.status ===201){
+			Navigate('/availablerooms')
+		}
+		}	
+		catch(error){
+			console.log(error)
+		}
+		
 	}
 	return (
 		<div className='Form-Page-Container'>

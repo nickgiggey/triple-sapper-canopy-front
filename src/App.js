@@ -8,6 +8,8 @@ import NotFound from './Utilities/NotFound';
 import Guest from './Guest/Guest';
 import './Utilities/reset.css';
 import './App.css';
+import AvailableRoomList from './AvailableRooms/AvailableRoomList';
+
 
 function App() {
 	return (
@@ -39,6 +41,7 @@ function App() {
 					<Route path='/body' element={<Body />} />
 					<Route path='/guestform' element={<CreateGuestForm />} />
 					<Route path='/roomlist' element={<RoomList />} />
+					<Route path='/availablerooms' element={<AvailableRoomList />} />
 					<Route path='/guestlist' element={<Guest />} />
 					<Route path='*' element={<NotFound />} />
 				</Routes>
