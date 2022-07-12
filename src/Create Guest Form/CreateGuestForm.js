@@ -24,11 +24,11 @@ function CreateGuestForm(props) {
 		await setCurrentFormState(currentFormState);
 		try {
 			const response = await axios.post(
-				'http://localhost:1337/api/guests',
+				'http://localhost:1337/api/guest',
 				currentFormState
 			);
 			const guestId = response.data._id;
-			
+
 			setCurrentFormState(initialFormState);
 
 			if (response.status === 200) {

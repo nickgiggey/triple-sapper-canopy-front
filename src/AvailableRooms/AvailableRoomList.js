@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import AvailableRoomDisplay from './AvailableRoomDisplay';
 
-
 function AvailableRoomList(props) {
 	const [rooms, setRooms] = useState([]);
 	const [loading, setLoading] = useState(true);
