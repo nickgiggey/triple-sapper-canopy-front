@@ -9,8 +9,10 @@ function AvailableRoomList(props) {
 	async function getRooms() {
 		try {
 			const response = await axios.get('http://localhost:1337/api/rooms');
-			const results = await response.data.filter(result => result.availability);
-            setRooms(results);
+			const results = await response.data.filter(
+				(result) => result.availability
+			);
+			setRooms(results);
 		} catch (error) {
 			setLoading(false);
 		}
@@ -28,7 +30,7 @@ function AvailableRoomList(props) {
 
 		return () => clearTimeout(handleLoadingTimeOut);
 	}, []);
-    
+
 	if (loading && !rooms.length) {
 		return <h2>Loading...</h2>;
 	}

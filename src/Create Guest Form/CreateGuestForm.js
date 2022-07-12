@@ -12,7 +12,6 @@ function CreateGuestForm(props) {
 	};
 
 	const [currentFormState, setCurrentFormState] = useState(initialFormState);
-	
 
 	function handleChange(event) {
 		setCurrentFormState({
@@ -23,18 +22,19 @@ function CreateGuestForm(props) {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		await setCurrentFormState(currentFormState);
-		try{
-			const response = await axios.post('http://localhost:1337/api/guests',currentFormState);
-		setCurrentFormState(initialFormState);
-		if (response.status ===201){
-			Navigate('/availablerooms')
+		try {
+			const response = await axios.post(
+				'http://localhost:1337/api/guests',
+				currentFormState
+			);
+			setCurrentFormState(initialFormState);
+			if (response.status === 201) {
+				Navigate('/availablerooms');
+			}
+		} catch (error) {
+			console.log(error);
 		}
-		}	
-		catch(error){
-			console.log(error)
-		}
-		
-	}
+	};
 	return (
 		<div className='Form-Page-Container'>
 			<div className='Form-container'>
