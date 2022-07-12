@@ -1,29 +1,27 @@
 import React from 'react';
 import '../Utilities/reset.css';
 import './Guest.css';
-import { Link, Route, Routes } from 'react-router-dom';
 import guestSeed from '../guestSeed.json';
-import GuestRender from './GuestRender';
 
-function Link3(props) {
+function Guest(props) {
 	const guestList = guestSeed;
 
 	return (
 		<div className='home-container3'>
-			<section className='home-section3'>Hello from Guest List</section>
-			{guestList.map((item) => {
-				return (
-					<div className='guest-name' key={item.id}>
-						<p>
-							id: {item.id}
-							name: {item.name}
-							email: {item.email}
-						</p>
-					</div>
-				);
-			})}
+			<section className='home-section3'>Guest List</section>
+			<ul className='guest-list-container'>
+				{guestList.map((item) => {
+					return (
+						<li className='guest-list' key={item.id}>
+							<p className='guest-id'>guest-id: {item.id}</p>
+							<p>{item.name}</p>
+							<p>{item.email}</p>
+						</li>
+					);
+				})}
+			</ul>
 		</div>
 	);
 }
 
-export default Link3;
+export default Guest;

@@ -23,10 +23,10 @@ function App() {
 				</div>
 				<ul className='link-container'>
 					<Link to='/guestform'>
-						<li className='link pic-lib-link'>Guest From</li>
+						<li className='link pic-lib-link'>Guest Form</li>
 					</Link>
 					<Link to='/roomlist'>
-						<li className='link pic-lib-link'>ROOM LIST</li>
+						<li className='link pic-lib-link'>Room List</li>
 					</Link>
 					<Link to='/guestlist'>
 						<li className='link pic-lib-link'>Guest List</li>
