@@ -5,12 +5,12 @@ function RoomDisplay({ room }) {
 	if (room.availability) {
 		return (
 			<span className="grid-item available hovertext" data-hover="Available">
-				{room.roomNumber}
+				{room.roomnumber}
 			</span>);
 	} else {
 		return (
 			<span className="grid-item occupied hovertext" data-hover="Reserved">
-				{room.roomNumber}
+				{room.roomnumber}
 			</span>);
 	}
 }
