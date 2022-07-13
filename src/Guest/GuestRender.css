@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 
-.home-container3 {
+.home-container4 {
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50) url(the-palm-3840x2160-atlantis-dubai-hotel-6k-19258.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -20,9 +20,24 @@
     font-family: 'Cinzel', serif;
 }
 
-.home-section3 {
+.home-section4 {
     display: flex; 
     flex-direction: column;
     padding-top: 100px;
     align-items: center;
+}
+
+.individual-innerText{
+    background-color: rgba(233, 187, 131, 0.418);
+    color: rgb(51, 47, 47);
+    margin: 2% auto;
+    height: 70vh;
+    width: 60vw;
+    font-size: 60%;
+}
+
+.individual-id, .individual-email, .individual-partySize{
+    color: aqua;
+    margin-left: 2%;
+    line-height: 75px;
 }

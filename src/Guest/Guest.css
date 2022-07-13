@@ -38,10 +38,18 @@
     margin-left: 5%;
 }
 
+.guest-id{
+    text-align: left;
+    margin-right: 60%;
+    font-size: 75%;
+    font-weight: bold;
+    color: rgb(110, 54, 54);
+}
+
 .guest-list{
-    text-align: center;
+    text-align: left;
     justify-content: center;
-    line-height: 110%;
+    line-height: 100%;
     width: 250px;
     height: 125px;
     font-size: 25%;
@@ -51,23 +59,26 @@
     box-shadow: 0 4px 15px 0;
     color:rgb(36, 36, 36);
 }
-.guest-id{
-    text-align: left;
-    margin-bottom: 2%;
-    font-size: 75%;
-    font-weight: bold;
-    color: rgb(110, 54, 54);
+
+.guest-innerText{
+    line-height: 125%;
+    font-size: 90%;
+
 }
 
+
+
 .guest-button{
-    margin-top: 3%;
-    margin-left: 70%;
+    margin-top: 1%;
+    margin-left: 75%;
     padding: 3%;
     background-color: rgb(247, 234, 218, 0);
     border-radius: 10%;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(126, 69, 69);
-    border-width: 3px;
+    border-width: 2.25px;
+    border-color: rgb(23, 129, 223, 0);
     font-weight: bold;
+    cursor: pointer;
 
 }
