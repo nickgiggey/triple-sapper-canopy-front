@@ -10,7 +10,9 @@ function AvailableRoomList(props) {
 
 	async function getRooms() {
 		try {
-			const response = await axios.get('http://localhost:1337/api/rooms');
+			const response = await axios.get(
+				'https://secret-waters-54413.herokuapp.com/api/rooms'
+			);
 			const results = await response.data.filter(
 				(result) => result.availability
 			);

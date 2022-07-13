@@ -24,7 +24,7 @@ function CreateGuestForm(props) {
 		await setCurrentFormState(currentFormState);
 		try {
 			const response = await axios.post(
-				'http://localhost:1337/api/guests',
+				'https://secret-waters-54413.herokuapp.com/api/guests',
 				currentFormState
 			);
 			const guestId = response.data._id;

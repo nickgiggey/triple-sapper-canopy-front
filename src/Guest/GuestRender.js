@@ -14,7 +14,7 @@ function GuestRender() {
 	const getIndiviual = async () => {
 		try {
 			const response = await axios.get(
-				`http://localhost:1337/api/guests/${id}`
+				`https://secret-waters-54413.herokuapp.com/api/guests/${id}`
 			);
 			const results = await response.data;
 			console.log(results);

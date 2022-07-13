@@ -8,7 +8,7 @@ function AvailableRoomDisplay({ room, guestId }) {
 	const handleClick = async (event) => {
 		try {
 			const response = await axios.patch(
-				`http://localhost:1337/api/guests/${guestId}`,
+				`https://secret-waters-54413.herokuapp.com/api/guests/${guestId}`,
 				{ roominfo: room._id }
 			);
 		} catch (error) {
@@ -16,7 +16,7 @@ function AvailableRoomDisplay({ room, guestId }) {
 		}
 		try {
 			const result = await axios.patch(
-				`http://localhost:1337/api/rooms/${room._id}`,
+				`https://secret-waters-54413.herokuapp.com/api/rooms/${room._id}`,
 				{ guestinfo: guestId, availability: false }
 			);
 
