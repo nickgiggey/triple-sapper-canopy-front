@@ -41,9 +41,10 @@ function AvailableRoomList(props) {
 	// const results = rooms.filter(room => room.availability === true);
 	return (
 		<div className='home-container2'>
+			<h1 className='header'>Room Availability</h1>
 			<div className='grid-container'>
 				{rooms.map((room, index) => {
-					return <AvailableRoomDisplay room={room} key={index} />;
+					return <AvailableRoomDisplay room={room} key={room._Id} />;
 				})}
 			</div>
 		</div>
