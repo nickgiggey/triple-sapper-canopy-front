@@ -1,7 +1,7 @@
 import React from 'react';
 
-function GuestInfoButton({ availability }) {
-	if (availability) {
+function GuestInfoButton({ room }) {
+	if (!room.availability) {
 		return <button>Guest Information</button>;
 	}
 }

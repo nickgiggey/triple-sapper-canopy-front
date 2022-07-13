@@ -1,12 +1,14 @@
 import React from 'react';
 
-function RoomGuestInfo({ availability }) {
-	if (availability) {
+function RoomGuestInfo({ room }) {
+	if (!room.availability) {
 		return (
 			<div className='room-guest-info-wrapper'>
 				<p>Guest Info:</p>
-				<p>ID: asdfasdfasdfa</p>
-				<p>Name: adsfasdfasdf</p>
+				<p>ID: {room.guestinfo._id}</p>
+				<p>Name: {room.guestinfo.name}</p>
+				<p>Email: {room.guestinfo.email}</p>
+				<p>Party Size: {room.guestinfo.partySize}</p>
 			</div>
 		);
 	}
