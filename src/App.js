@@ -3,12 +3,14 @@ import Home from './Home/HomeContainer';
 import Body from './Home/Body';
 import CreateGuestForm from './Create Guest Form/CreateGuestForm';
 import RoomList from './RoomList/RoomList';
+import RoomInfo from './RoomInfo/RoomInfo';
 import NotFound from './Utilities/NotFound';
 import Guest from './Guest/Guest';
 import GuestRender from './Guest/GuestRender';
 import './Utilities/reset.css';
 import './App.css';
 import AvailableRoomList from './AvailableRooms/AvailableRoomList';
+
 
 function App() {
 	return (
@@ -44,6 +46,7 @@ function App() {
 						path='/guestforms/:guestId/availablerooms'
 						element={<AvailableRoomList />}
 					/>
+					<Route path='/roomlist/:id' element={<RoomInfo />} />
 					<Route path='/guestlist' element={<Guest />} />
 					<Route path='/guestlist/:id' element={<GuestRender />} />
 					<Route path='*' element={<NotFound />} />

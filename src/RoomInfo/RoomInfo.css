@@ -1,0 +1,63 @@
+.room-info-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    max-width: 800px;
+    width: 50%;
+    background-color: white;
+}
+
+.room-number {
+    font-size: 50px;
+}
+
+.room-status-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.room-status-header {
+    font-size: 20px;
+}
+
+.room-status {
+    font-size: 25px;;
+}
+
+.room-guest-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.room-buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    height: 15%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .information-wrapper {
+            height: 50%;
+            width: 95%;
+            background-color: white;
+        }
+}
