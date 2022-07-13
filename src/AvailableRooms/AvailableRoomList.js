@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import AvailableRoomDisplay from './AvailableRoomDisplay';
+import { useParams } from 'react-router-dom';
 
 function AvailableRoomList(props) {
 	const [rooms, setRooms] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const { guestId } = useParams();
 
 	async function getRooms() {
 		try {
@@ -38,13 +40,19 @@ function AvailableRoomList(props) {
 	// if (!loading && !rooms.length) {
 	// 	return <h2>Oops, something went wrong. Please try again later! </h2>;
 	// }
-	// const results = rooms.filter(room => room.availability === true);
+
 	return (
 		<div className='home-container2'>
 			<h1 className='header'>Room Availability</h1>
 			<div className='grid-container'>
 				{rooms.map((room, index) => {
-					return <AvailableRoomDisplay room={room} key={room._Id} />;
+					return (
+						<AvailableRoomDisplay
+							room={room}
+							key={room._id}
+							guestId={guestId}
+						/>
+					);
 				})}
 			</div>
 		</div>
