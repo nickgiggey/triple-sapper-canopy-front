@@ -12,7 +12,9 @@ function Guest() {
 
 	const getGuests = async () => {
 		try {
-			const response = await axios.get('http://localhost:1337/api/guests');
+			const response = await axios.get(
+				'https://secret-waters-54413.herokuapp.com/api/guests'
+			);
 			const results = await response.data;
 			setGuests(results);
 		} catch (error) {

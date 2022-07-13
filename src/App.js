@@ -17,7 +17,7 @@ function App() {
 			<nav className='nav-container'>
 				<div className='logo-container'>
 					<h1 className='logo-title'>
-						<Link to='/'>ZET Resorts & Hotels</Link>
+						<Link to='/'>Gitz Carlton Resort & Hotel</Link>
 					</h1>
 				</div>
 				<ul className='link-container'>

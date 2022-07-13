@@ -16,7 +16,7 @@ function RoomInfo(props) {
 	async function getRoom() {
 		try {
 			const response = await axios.get(
-				`http://localhost:1337/api/rooms/${roomId}`
+				`https://secret-waters-54413.herokuapp.com/api/rooms/${roomId}`
 			);
 			const results = await response.data;
 			setRoom(results);
