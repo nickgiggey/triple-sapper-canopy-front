@@ -11,7 +11,6 @@ import './Utilities/reset.css';
 import './App.css';
 import AvailableRoomList from './AvailableRooms/AvailableRoomList';
 
-
 function App() {
 	return (
 		<section className='main-container'>
@@ -20,9 +19,6 @@ function App() {
 					<h1 className='logo-title'>
 						<Link to='/'>ZET Resorts & Hotels</Link>
 					</h1>
-					<Link to='/'>
-						{/* <img src={logo} alt='' style={logoStyle} /> */}
-					</Link>
 				</div>
 				<ul className='link-container'>
 					<li className='link pic-lib-link'>
