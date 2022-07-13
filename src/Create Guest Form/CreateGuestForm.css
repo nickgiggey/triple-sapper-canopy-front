@@ -1,5 +1,5 @@
-.Form-Page-Container{
-    min-height: 100vh;
+.Form-Page-Container {
+    height: 100vh;
     /* background-color: whitesmoke; */
     display: grid;
     place-items: center center;
@@ -10,47 +10,50 @@
 }
 
 .Form-container {
-    background-color: rgb(250,250,255);
+    display: flex;
+    background-color: #fafaff;
     max-height: 50%;
-    max-width: auto;
-    padding: 2em;
+    max-width: 350px;
+    padding: 4em;
     box-shadow: 0 4px 15px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-.guest-form{
+
+.guest-form {
     height: 100%;
-    width: auto;
+    width: 100%;
     display: grid;
     place-items: center;
     margin-top: -1em;
 }
 
-.form-input{
+.form-input {
     margin-bottom: 2em;
     margin-top: 0.2em;
-    height:3em;
-    width: 80%;
+    height: 3em;
     font-size: 1.1em;
     border-radius: 0.5em;
     border: none;
     border-style: none;
     padding: 0.5em;
-
 }
-.form-input:active,.form-input:hover{
+
+.form-input:active, .form-input:hover {
     box-shadow: 0 4px 15px 0;
 }
 
-.form-submit:hover{
+.form-submit:hover {
     box-shadow: 0 4px 15px 0;
     background-color: black;
 }
-.form-submit{
+
+.form-submit {
     padding: 0.5em;
     font-size: 1.3em;
-    /* background-color: rgb(169, 92, 92); */
     background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.25)), rgba(0, 0, 0, 0.06);
     border: none;
     border-radius: 0.5em;
-    color:white;
- 
+    color: white;
 }

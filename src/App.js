@@ -17,23 +17,23 @@ function App() {
 		<section className='main-container'>
 			<nav className='nav-container'>
 				<div className='logo-container'>
-					<Link to='/'>
-						<h1 className='logo-title'>ZET Resorts & Hotels</h1>
-					</Link>
+					<h1 className='logo-title'>
+						<Link to='/'>ZET Resorts & Hotels</Link>
+					</h1>
 					<Link to='/'>
 						{/* <img src={logo} alt='' style={logoStyle} /> */}
 					</Link>
 				</div>
 				<ul className='link-container'>
-					<Link to='/guestform'>
-						<li className='link pic-lib-link'>Guest Form</li>
-					</Link>
-					<Link to='/roomlist'>
-						<li className='link pic-lib-link'>Room List</li>
-					</Link>
-					<Link to='/guestlist'>
-						<li className='link pic-lib-link'>Guest List</li>
-					</Link>
+					<li className='link pic-lib-link'>
+						<Link to='/guestform'>Guest Form</Link>
+					</li>
+					<li className='link pic-lib-link'>
+						<Link to='/roomlist'>Room List</Link>
+					</li>
+					<li className='link pic-lib-link'>
+						<Link to='/guestlist'>Guest List</Link>
+					</li>
 				</ul>
 			</nav>
 			<main>

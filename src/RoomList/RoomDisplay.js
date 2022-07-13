@@ -3,9 +3,15 @@ import './roomlist.css';
 
 function RoomDisplay({ room }) {
 	if (room.availability) {
-		return <div className='grid-item available'>{room.roomNumber}</div>;
+		return (
+			<span className="grid-item available hovertext" data-hover="Available">
+				{room.roomNumber}
+			</span>);
 	} else {
-		return <div className='grid-item occupied'>{room.roomNumber}</div>;
+		return (
+			<span className="grid-item occupied hovertext" data-hover="Reserved">
+				{room.roomNumber}
+			</span>);
 	}
 }
 
