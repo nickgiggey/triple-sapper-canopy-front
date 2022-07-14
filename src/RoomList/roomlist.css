@@ -95,3 +95,13 @@
     background-color: #c21807;
     opacity: 90%;
 }
+
+@media screen and (max-width: 800px) {
+    .header {
+        padding-top: 110px;
+        font-size: .45em;
+    }
+    .grid-container {
+        padding-top: 20px;
+    }
+}
