@@ -64,3 +64,10 @@ a {
   background-color: lightblue;
   height: 100%;
 }
+
+@media (max-width: 420px){
+.nav-container{
+  height: 150px;
+}
+
+}
