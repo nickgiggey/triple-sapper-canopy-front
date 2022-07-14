@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50) url(pexels-photo-547119.jpeg);
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50) url(218253.jpg);
     font-family: 'Cinzel', serif;
 }
 
@@ -17,20 +17,39 @@
     align-items: center;
     height: 50%;
     min-height: 400px;
-    max-width: 800px;
+    max-width: 600px;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     border: 3px solid rgba(0, 0, 0, 0.1);
     margin: 5px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 10px 0;
-    font-size: 30px;
+    font-size: 1.4em;
     text-align: center;
+}
+
+.occupied-status {
+    border: 3px solid red;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    padding: 4px;
+    box-shadow: 0 2px 5px 0 grey;
+}
+
+.available-status {
+    border: 3px solid green;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    padding: 2px;
+    box-shadow: 0 2px 5px 0 grey;
 }
 
 span {
     font-weight: bold;
+    padding: 5px;
 }
 
 .guest-info {
@@ -46,6 +65,7 @@ span {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .room-status-header {
@@ -61,8 +81,12 @@ span {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 5px;
     align-items: center;
-    border: 1px solid green;
+    box-shadow: 0 2px 5px 0 grey;
+    border-radius: 10px;
+    z-index: 500;
+    background-color: #fffc;
 }
 
 .room-buttons-wrapper {
@@ -73,10 +97,25 @@ span {
     height: 15%;
 }
 
+button {
+    height: 25px;
+    width: 125px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 grey;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
     .information-wrapper {
         height: 50%;
         width: 95%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
     }
 }
