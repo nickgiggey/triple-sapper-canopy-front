@@ -6,7 +6,8 @@ import { useParams } from 'react-router-dom';
 function AvailableRoomList(props) {
 	const [rooms, setRooms] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [guestInfo, setGuestInfo] =useState({})
+	const [guestInfo, setGuestInfo] = useState({});
+	const [errorInfo, setErrorInfo] = useState({});
 	const { guestId } = useParams();
 
 	async function getRooms() {
@@ -14,62 +15,80 @@ function AvailableRoomList(props) {
 			const response = await axios.get(
 				'https://secret-waters-54413.herokuapp.com/api/rooms'
 			);
-			setRooms(response.data);
+			const results = await response.data.filter((room) => {
+				return room.availability && room.roomsize >= guestInfo.partySize;
+			});
+			setRooms(results);
+			
 		} catch (error) {
-			setLoading(false);
+			setErrorInfo(error);
 		}
 	}
 
 	async function getGuestInfo(id) {
 		try {
-			const guest = await axios.get(`https://secret-waters-54413.herokuapp.com/api/guests/${id}`);
+			const guest = await axios.get(
+				`https://secret-waters-54413.herokuapp.com/api/guests/${id}`
+			);
 			setGuestInfo(guest.data);
 		} catch (error) {
-			setLoading(false);
+			setErrorInfo(error);
 		}
 	}
 
 	useEffect(() => {
-		const handleLoadingTimeOut = setTimeout(() => {
-			if (!rooms.length) {
-				setLoading(false);
-			}
-		}, 5000);
-		getGuestInfo(guestId);
 		// Write your GET fetch() or axios() request here
-		getRooms();
-
-		return () => clearTimeout(handleLoadingTimeOut);
+		getGuestInfo(guestId);
 	}, []);
 
-	if (loading && !rooms.length) {
-		return <h2>Loading...</h2>;
+	useEffect(() => {
+		// Write your GET fetch() or axios() request here
+		getRooms();
+	}, [guestInfo]);
+
+	useEffect(() => {
+		// Write your GET fetch() or axios() request here
+			setLoading(false);
+	}, [rooms]);
+
+	if (errorInfo.message) {
+		return (
+			<div className='extra-info'>
+				<h2>Something has gone wrong!!</h2>
+			</div>
+		);
 	}
 
-	// if (!loading && !rooms.length) {
-	// 	return <h2>Oops, something went wrong. Please try again later! </h2>;
-	// }
-
-	return (
-		<div className='home-container2'>
-			<h1 className='header'>Room Availability</h1>
-			<div className='grid-container'>
-				{rooms
-					.filter((room) => {
-						return (room.availability && room.roomsize >= guestInfo.partySize)
-					})
-					.map((room) => {
-					return (
-						<AvailableRoomDisplay
-							room={room}
-							key={room._id}
-							guestId={guestId}
-						/>
-					);
-				})}
+	if (loading) {
+		return (
+			<div className='extra-info'>
+				<h2>Loading...</h2>
 			</div>
-		</div>
-	);
+		);
+	}
+
+	if (!loading) {
+		return (
+			<div className='home-container2'>
+				<h1 className='header'>Room Availability</h1>
+				<div className='grid-container'>
+					{rooms.length ? (
+						rooms.map((room) => {
+							return (
+								<AvailableRoomDisplay
+									room={room}
+									key={room._id}
+									guestId={guestId}
+								/>
+							);
+						})
+					) : (
+						<p className="no-rooms">There don't appear to be any rooms available at the moment for this party. Sorry for the inconvenience.</p>
+					)}
+				</div>
+			</div>
+		);
+	}
 }
 
 export default AvailableRoomList;

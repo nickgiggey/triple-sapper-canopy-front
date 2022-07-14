@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   background-color: white;
   height: 100vh;
@@ -15,12 +19,12 @@ html {
 
 .nav-container {
   display: flex;
-  background: linear-gradient(rgba(44, 50, 56, 1) 0%, rgba(44, 50, 56, 1) 67%, rgba(44, 50, 56, 0.98) 71%, rgba(44, 50, 56, 0.95) 74%, rgba(43, 50, 56, 0.85) 81%, rgba(44, 50, 56, 0.75) 85%, rgba(44, 50, 56, 0.4) 94%, transparent 100%);
+  background: linear-gradient(rgba(44, 50, 56, 1) 0%, rgba(44, 50, 56, 1) 67%, rgba(44, 50, 56, 0.98) 71%, rgba(44, 50, 56, 0.95) 74%, rgba(44, 50, 56, 0.85) 81%, rgba(44, 50, 56, 0.75) 85%, rgba(44, 50, 56, 0.4) 94%, transparent 100%);
   flex-direction: column;
   align-items: center;
   width: 100%;
   z-index: 500;
-  height: 150px;
+  height: 155px;
   position: fixed;
 }
 
@@ -50,7 +54,7 @@ a {
   width: auto;
   height: 110px;
   padding-top: 0;
-  padding-bottom: 15px
+  padding-bottom: 20px
 }
 
 .logo-title {
