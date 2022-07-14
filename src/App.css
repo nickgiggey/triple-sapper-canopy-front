@@ -65,9 +65,8 @@ a {
   height: 100%;
 }
 
-@media (max-width: 420px){
-.nav-container{
-  height: 150px;
-}
-
+@media screen and (max-width: 800px) {
+  .logo-title {
+    font-size: 30px;
+  }
 }
