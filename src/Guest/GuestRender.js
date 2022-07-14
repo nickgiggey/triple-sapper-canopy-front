@@ -17,13 +17,11 @@ function GuestRender() {
 				`https://secret-waters-54413.herokuapp.com/api/guests/${id}`
 			);
 			const results = await response.data;
-			console.log(results);
 			setIndividual(results);
 		} catch (error) {
 			console.log(error);
 		}
 	};
-
 
 	// =========== Check OUT Function ============= //
 	const handleCheckOut = async (event) => {
@@ -32,8 +30,8 @@ function GuestRender() {
 				`https://secret-waters-54413.herokuapp.com/api/rooms/${individual.roominfo._id}`,
 				{ guestinfo: null, availability: true }
 			);
-		} catch (err) {
-			console.log('oh no an error has occured', err);
+		} catch (error) {
+			console.log('oh no an error has occured', error);
 		}
 		try {
 			const response = await axios.patch(
@@ -48,14 +46,10 @@ function GuestRender() {
 		}
 	};
 
-
 	// =========== Check IN Function ============= //
 	const handleCheckIn = async (event) => {
 		navigate(`/guestforms/${id}/availablerooms`);
 	};
-
-
-	
 
 	// =========== Upgrade Room Function ============= //
 	const handleUpgrade = async (event) => {
@@ -64,8 +58,8 @@ function GuestRender() {
 				`https://secret-waters-54413.herokuapp.com/api/rooms/${individual.roominfo._id}`,
 				{ guestinfo: null, availability: true }
 			);
-		} catch (err) {
-			console.log('oh no an error has occured', err);
+		} catch (error) {
+			console.log('oh no an error has occured', error);
 		}
 		try {
 			const response = await axios.patch(
@@ -80,9 +74,6 @@ function GuestRender() {
 		}
 	};
 
-
-
-
 	// =========== UnSubscribe Function ============= //
 	const handleUnSubscribe = async (event) => {
 		try {
@@ -90,8 +81,8 @@ function GuestRender() {
 				`https://secret-waters-54413.herokuapp.com/api/rooms/${individual.roominfo._id}`,
 				{ guestinfo: null, availability: true }
 			);
-		} catch (err) {
-			console.log('oh no an error has occured', err);
+		} catch (error) {
+			console.log('oh no an error has occured', error);
 		}
 		try {
 			const result = await axios.delete(
