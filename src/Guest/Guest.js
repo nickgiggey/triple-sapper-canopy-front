@@ -44,22 +44,22 @@ function Guest() {
 				{guests.map((item) => {
 					return (
 						<li className='guest-list' key={item._id}>
-							<span className='guest-id'>{item._id}</span>
-							<span className='guest-innerText'>
+							<ul className='guest-id'><span>ID:</span>{item._id}</ul>
+							<ul className='guest-innerText'>
 								<br />
-								{item.name}
+								<span>Name:</span>{item.name}
 								<br />
-								{item.email}
+								<span>Email:</span>{item.email}
 								<br />
-								Party-Size#: {item.partySize}
-							</span>
+								<span>Party-Size#:</span> {item.partySize}
+							</ul>
 
 							<button
 								className='guest-button'
 								onClick={() => {
 									navigate(`/guestlist/${item._id}`);
 								}}>
-								Expand
+								<span className="expand">Expand</span>
 							</button>
 						</li>
 					);

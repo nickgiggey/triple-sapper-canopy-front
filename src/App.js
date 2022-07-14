@@ -10,15 +10,16 @@ import GuestRender from './Guest/GuestRender';
 import './Utilities/reset.css';
 import './App.css';
 import AvailableRoomList from './AvailableRooms/AvailableRoomList';
+import Gitz from './Utilities/Gitz Carlton-logos.jpeg';
 
 function App() {
 	return (
 		<section className='main-container'>
 			<nav className='nav-container'>
-				<div className='logo-container'>
-					<h1 className='logo-title'>
-						<Link to='/'>Gitz Carlton Resort & Hotel</Link>
-					</h1>
+				<div className='logo-container-main'>
+					<Link to='/'>
+						<img className='logo-container' src={Gitz} alt='' />
+					</Link>
 				</div>
 				<ul className='link-container'>
 					<li className='link pic-lib-link'>

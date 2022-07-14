@@ -74,7 +74,6 @@ span {
 
 .room-status {
     font-size: 25px;
-    ;
 }
 
 .room-guest-info-wrapper {
@@ -97,7 +96,7 @@ span {
     height: 15%;
 }
 
-button {
+.guestinfo-b, .guest-checkout {
     height: 25px;
     width: 125px;
     border-radius: 5px;
@@ -108,7 +107,7 @@ button {
     box-shadow: 0 2px 5px 0 grey;
 }
 
-button:hover {
+.guestinfo-b:hover, .guest-checkout:hover {
     cursor: pointer;
 }
 

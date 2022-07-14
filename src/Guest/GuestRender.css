@@ -10,90 +10,92 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    height: 1500px;
+    height: 100vh;
     align-items: center;
-    padding: 5px;
+    padding: 25px;
     font-size: 5rem;
     color: grey;
     font-family: 'Cinzel', serif;
 }
 
 .home-section4 {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 150px;
     align-items: center;
 }
 
-.individual-innerText{
+.individual-innerText {
     display: inline-block;
-    background-color: rgba(233, 187, 131, 0.5);
-    color: rgb(51, 47, 47);
-    margin: 3%;
     height: 600px;
     width: 60vw;
-    line-height: 50px;
+    background-color: rgb(250, 233, 159, .65);
+    color: rgb(36, 36, 36);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 10px 0;
 }
 
-
-.individual-id, .individual-email, .individual-partySize, .individual-checkIn{
+.individual-id, .individual-email, .individual-partySize, .individual-checkIn {
     color: rgb(110, 54, 54);
     margin-left: 3%;
     font-size: 35%;
 }
 
-.individual-results-text{
+.individual-results-text {
     display: flex;
     margin-left: 10%;
     font-size: 30%;
     font-weight: bold;
-
 }
 
-.individual-size-text, .individual-checkIn-text, .individual-roomNumber-text{
+.individual-size-text, .individual-checkIn-text, .individual-roomNumber-text {
     font-size: 30%;
     margin-left: 3%;
     font-weight: bold;
 }
 
-
-.checkIn-button, .checkOut-button, .unSub-button, .upgrade-button{
-    margin-top: 10%;
+.checkIn-button, .checkOut-button, .unSub-button, .upgrade-button {
+    margin-top: 2%;
     margin-left: 2%;
     padding: 2%;
     border-radius: 10px;
     font-family: cinzel;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    border-width: 2.5px;
+    border: 2px solid #00000030;
     color: rgb(255, 255, 255);
     font-size: 25%;
     cursor: pointer;
-
+    box-shadow: 0 2px 10px 0 grey;
 }
-.checkIn-button, .upgrade-button{
+
+.checkIn-button, .upgrade-button {
     background-color: rgba(83, 185, 106, 0.8);
-    border-color: rgba(148, 187, 111, 0.486);
-}
-.checkOut-button,.unSub-button{
-    background-color: rgba(185, 83, 83, 0.8);
-    border-color: rgba(187, 111, 111, 0.486);
+    /* border-color: rgba(148, 187, 111, 0.486); */
 }
 
-@media screen and (max-width:650px){
+.checkOut-button, .unSub-button {
+    background-color: rgba(185, 83, 83, 0.8);
+    /* border-color: rgba(187, 111, 111, 0.486); */
+}
+
+@media screen and (max-width:650px) {
 
     .home-section4 {
-        display: flex; 
+        display: flex;
         text-align: center;
         flex-direction: column;
         padding-top: 100px;
         align-items: center;
         font-size: 35%;
     }
-    
-    .individual-innerText{
+
+    .individual-innerText {
         display: inline-block;
         background-color: rgba(233, 187, 131, 0.5);
         color: rgb(51, 47, 47);
@@ -102,22 +104,22 @@
         width: 60vw;
         line-height: 25px;
     }
-    
-    
-    .individual-id, .individual-email, .individual-partySize, .individual-checkIn{
+
+
+    .individual-id, .individual-email, .individual-partySize, .individual-checkIn {
         color: rgb(110, 54, 54);
         margin-left: 3%;
         font-size: 4vw;
     }
-    
-    .individual-results-text{
+
+    .individual-results-text {
         display: flex;
         margin-left: 10%;
         font-size: 3.5vw;
-    
+
     }
-    
-    .individual-size-text, .individual-checkIn-text{
+
+    .individual-size-text, .individual-checkIn-text {
         font-size: 3.5vw;
         margin-left: 3%;
     }
