@@ -77,10 +77,12 @@ function GuestRender() {
 	// =========== UnSubscribe Function ============= //
 	const handleUnSubscribe = async (event) => {
 		try {
-			const response = await axios.patch(
-				`https://secret-waters-54413.herokuapp.com/api/rooms/${individual.roominfo._id}`,
-				{ guestinfo: null, availability: true }
-			);
+			if (individual.roominfo) { 
+				const response = await axios.patch(
+					`https://secret-waters-54413.herokuapp.com/api/rooms/${individual.roominfo._id}`,
+					{ guestinfo: null, availability: true }
+				);
+			}
 		} catch (error) {
 			console.log('oh no an error has occured', error);
 		}
