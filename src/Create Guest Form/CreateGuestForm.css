@@ -1,27 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 .Form-Page-Container {
     padding-top: 50px;
     height: 100vh;
-    /* background-color: whitesmoke; */
     display: grid;
     place-items: center center;
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50) url(pexels-photo-261181.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Cinzel', serif;
 }
 
 .Form-container {
     display: flex;
-    background-color: #fafaff;
     height: 50%;
     min-height: 420px;
     width: 50%;
     max-width: 500px;
-    padding: 2.5em;
-    box-shadow: 0 4px 15px 0;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px 0;
 }
 
 .guest-form {
@@ -32,33 +37,39 @@
     margin-top: -1em;
 }
 
+.form-label {
+    font-size: 1.4em;
+}
+
 .form-input {
     margin-bottom: 2em;
     margin-top: 0.2em;
     height: 3em;
     font-size: 1.1em;
     border-radius: 0.5em;
-    border: none;
-    border-style: none;
+    border: 2px solid grey;
     padding: 0.5em;
+    font-family: 'Cinzel', serif;
 }
 
 .form-input:active, .form-input:hover {
-    box-shadow: 0 4px 15px 0;
+    box-shadow: 0 2px 5px 0;
 }
 
 .form-submit:hover {
-    box-shadow: 0 4px 15px 0;
-    background-color: black;
+    box-shadow: 0 4px 10px 0 grey;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.25)), rgba(0, 0, 0, 0.06);
+    cursor: pointer;
 }
 
 .form-submit {
     padding: 0.5em;
     font-size: 1.3em;
-    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.25)), rgba(0, 0, 0, 0.06);
-    border: none;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.25)), rgba(0, 0, 0, 0.06);
     border-radius: 0.5em;
-    color: white;
+    color: black;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 2px 5px 0 grey;
 }
 
 @media screen and (max-width: 800px) {

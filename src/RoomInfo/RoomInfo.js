@@ -42,7 +42,6 @@ function RoomInfo(props) {
 		return <h2>Loading...</h2>;
 	}
 
-
 	return (
 		<div className='room-info-wrapper'>
 			<div className='information-wrapper'>

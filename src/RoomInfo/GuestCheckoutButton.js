@@ -29,7 +29,7 @@ function GuestCheckoutButton({ room }) {
 	};
 
 	if (!room.availability) {
-		return <button onClick={handleClick}>Guest Checkout</button>;
+		return <button className="guest-checkout" onClick={handleClick}>Guest Checkout</button>;
 	}
 }
 
