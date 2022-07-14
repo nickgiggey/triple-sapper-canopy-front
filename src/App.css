@@ -69,4 +69,7 @@ a {
   .logo-title {
     font-size: 30px;
   }
+    .link {
+      font-size: 1.25rem;
+    }
 }
