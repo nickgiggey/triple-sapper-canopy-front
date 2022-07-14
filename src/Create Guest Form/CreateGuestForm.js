@@ -7,7 +7,7 @@ function CreateGuestForm(props) {
 	const initialFormState = {
 		name: '',
 		email: '',
-		partySize: 0,
+		partySize: 1,
 	};
 	const navigate = useNavigate();
 	const [currentFormState, setCurrentFormState] = useState(initialFormState);
@@ -73,7 +73,7 @@ function CreateGuestForm(props) {
 						className='form-input'
 						type='number'
 						id='partySize'
-						min={0}
+						min={1}
 						max={6}
 						value={currentFormState.partySize}
 						placeholder='# of guests'
