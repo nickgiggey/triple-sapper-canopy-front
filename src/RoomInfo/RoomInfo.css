@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.room-info-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50) url(218253.jpg);
+    font-family: 'Cinzel', serif;
+}
+
+.information-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    min-height: 400px;
+    max-width: 600px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px 0;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.occupied-status {
+    border: 3px solid red;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    padding: 4px;
+    box-shadow: 0 2px 5px 0 grey;
+}
+
+.available-status {
+    border: 3px solid green;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    padding: 2px;
+    box-shadow: 0 2px 5px 0 grey;
+}
+
+span {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.guest-info {
+    text-decoration: underline;
+}
+
+.room-number {
+    font-size: 50px;
+}
+
+.room-status-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.room-status-header {
+    font-size: 20px;
+}
+
+.room-status {
+    font-size: 25px;
+}
+
+.room-guest-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 grey;
+    border-radius: 10px;
+    z-index: 500;
+    background-color: #fffc;
+}
+
+.room-buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    height: 15%;
+}
+
+.guestinfo-b, .guest-checkout {
+    height: 25px;
+    width: 125px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 grey;
+}
+
+.guestinfo-b:hover, .guest-checkout:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .information-wrapper {
+        height: 50%;
+        width: 95%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}

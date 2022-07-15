@@ -52,7 +52,7 @@ li {
     height: 50vmax;
     list-style: none;
     position: fixed;
-    top: 0px;
+    top: 100px;
     z-index: 200;
     cursor: cell;
     margin: 0px;
