@@ -74,7 +74,7 @@ function CreateGuestForm(props) {
 						type='number'
 						id='partySize'
 						min={1}
-						max={7}
+						max={6}
 						value={currentFormState.partySize}
 						placeholder='# of guests'
 						onChange={handleChange}
