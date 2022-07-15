@@ -23,7 +23,6 @@ function GuestRender() {
 		}
 	};
 
-	// =========== Check OUT Function ============= //
 	const handleCheckOut = async (event) => {
 		try {
 			const response = await axios.patch(
@@ -46,12 +45,10 @@ function GuestRender() {
 		}
 	};
 
-	// =========== Check IN Function ============= //
 	const handleCheckIn = async (event) => {
 		navigate(`/guestforms/${id}/availablerooms`);
 	};
 
-	// =========== Upgrade Room Function ============= //
 	const handleUpgrade = async (event) => {
 		try {
 			const response = await axios.patch(
@@ -74,7 +71,6 @@ function GuestRender() {
 		}
 	};
 
-	// =========== UnSubscribe Function ============= //
 	const handleUnSubscribe = async (event) => {
 		try {
 			if (individual.roominfo) { 
@@ -120,7 +116,6 @@ function GuestRender() {
 				<span className='individual-size-text'> {individual.partySize}</span>
 				<br />
 				<span className='individual-checkIn'>Checked In: </span>
-				{/* ------- Checked In ? YES OR NO ------- */}
 				{!individual.roominfo ? (
 					<span className='individual-checkIn-text'>No</span>
 				) : (
@@ -128,7 +123,6 @@ function GuestRender() {
 						Yes <br />
 					</span>
 				)}
-				{/* ------- YES ? ------- */}
 				{!individual.roominfo ? (
 					<span className='individual-results-text'>{null}</span>
 				) : (
@@ -155,7 +149,6 @@ function GuestRender() {
 						upgrade
 					</button>
 				)}
-				{/* ------- NO ? ------- */}
 				{!individual.roominfo ? (
 					<button className='checkIn-button' onClick={handleCheckIn}>
 						Check In

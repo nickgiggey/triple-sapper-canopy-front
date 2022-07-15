@@ -32,7 +32,6 @@ function RoomInfo(props) {
 			}
 		}, 5000);
 
-		// Write your GET fetch() or axios() request here
 		getRoom();
 
 		return () => clearTimeout(handleLoadingTimeOut);

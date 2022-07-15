@@ -30,7 +30,6 @@ function RoomList(props) {
 			}
 		}, 5000);
 
-		// Write your GET fetch() or axios() request here
 		getRooms();
 
 		return () => clearTimeout(handleLoadingTimeOut);
