@@ -37,17 +37,14 @@ function AvailableRoomList(props) {
 	}
 
 	useEffect(() => {
-		// Write your GET fetch() or axios() request here
 		getGuestInfo(guestId);
 	}, []);
 
 	useEffect(() => {
-		// Write your GET fetch() or axios() request here
 		getRooms();
 	}, [guestInfo]);
 
 	useEffect(() => {
-		// Write your GET fetch() or axios() request here
 			setLoading(false);
 	}, [rooms]);
 
