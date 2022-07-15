@@ -39,32 +39,38 @@ function Guest() {
 
 	return (
 		<div className='home-container3'>
-			<section className='home-section3'>Guest List</section>
-			<ul className='guest-list-container'>
-				{guests.map((item) => {
-					return (
-						<li className='guest-list' key={item._id}>
-							<ul className='guest-id'><span>ID:</span>{item._id}</ul>
-							<ul className='guest-innerText'>
-								<br />
-								<span>Name:</span>{item.name}
-								<br />
-								<span>Email:</span>{item.email}
-								<br />
-								<span>Party-Size#:</span> {item.partySize}
-							</ul>
-
-							<button
-								className='guest-button'
-								onClick={() => {
-									navigate(`/guestlist/${item._id}`);
-								}}>
-								<span className="expand">Expand</span>
-							</button>
-						</li>
-					);
-				})}
-			</ul>
+			<section className='home-section3'>
+				<span className="title">Guest List</span>
+				<ul className='guest-list-container'>
+					{guests.map((item) => {
+						return (
+							<li className='guest-list' key={item._id}>
+								<ul className='guest-id'>
+									<span>ID:</span>
+									{item._id}
+								</ul>
+								<ul className='guest-innerText'>
+									<br />
+									<span>Name: </span>
+									{item.name}
+									<br />
+									<span className='guest-email'>Email: </span>
+									{item.email}
+									<br />
+									<span>Party-Size#: </span> {item.partySize}
+								</ul>
+								<button
+									className='guest-button'
+									onClick={() => {
+										navigate(`/guestlist/${item._id}`);
+									}}>
+									<span className='expand'>Expand</span>
+								</button>
+							</li>
+						);
+					})}
+				</ul>
+			</section>
 		</div>
 	);
 }

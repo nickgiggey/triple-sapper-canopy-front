@@ -21,6 +21,7 @@
 }
 
 .home-section4 {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     padding-top: 150px;
@@ -101,7 +102,7 @@
         color: rgb(51, 47, 47);
         margin: 2%;
         height: 70vh;
-        width: 60vw;
+        width: 90vw;
         line-height: 25px;
     }
 
