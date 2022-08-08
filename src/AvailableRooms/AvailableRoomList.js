@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react';
+import {useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import AvailableRoomDisplay from './AvailableRoomDisplay';
@@ -123,7 +123,7 @@ function AvailableRoomList() {
 		return(
 			<div className='home-container2'>
 				<h1 className='header'>Room Availability</h1>
-				<div className='grid-container' track="available-grid">
+				<div className='grid-container'>
 					{rooms.map((room) => {
 							return (
 								<AvailableRoomDisplay
