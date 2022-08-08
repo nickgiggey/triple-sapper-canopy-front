@@ -1,30 +1,38 @@
-import {GET_GUEST_INFO, GET_ROOMS_INFO, LOADING, ERROR} from './useCases'
+import {GET_GUEST_INFO, GET_ROOMS_INFO, LOADING, VERDICT, ERROR} from './useAvailability'
 
 const availableReducer = (state, action) => {
    switch(action.type){
       case GET_GUEST_INFO:
-         console.log('GET_GUEST_INFO is functioning in availableReducer')
          return{
-
+            ...state,
+            guestInfo: action.payload,
+            guestInfoSuccess: !action.payload ? false : true,
          }
       case GET_ROOMS_INFO:
-         console.log('GET_ROOMS_INFO is functioning in availableReducer')
          return{
-
+            ...state,
+            rooms: action.payload,
          }
       case LOADING:
-         console.log('LOADING is functioning in availableReducer')
          return{
-
+            ...state,
+            loading: action.payload,
+         }
+      case VERDICT:
+         return{
+            ...state,
+            verdict: action.payload,
+            roomsInfoSuccess: state.rooms <= 0 ? false : true,
          }
       case ERROR:
-         console.log('ERROR is functioning in availableReducer')
          return{
-
+            ...state,
+            error: !action.payload ? false : true,
+            errorInfo: action.payload,
+         } 
       }
-
    }
    
-};
+
 
 export default availableReducer;

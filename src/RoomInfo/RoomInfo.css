@@ -75,6 +75,16 @@ span {
 .room-status {
     font-size: 25px;
 }
+.no_rooms_message{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 60%;
+    width: 60%;
+    margin-top: 15%;
+    margin-bottom: auto;
+    font-size: 1rem;
+}
 
 .room-guest-info-wrapper {
     display: flex;
