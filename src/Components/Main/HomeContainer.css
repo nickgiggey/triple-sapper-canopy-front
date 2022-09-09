@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.home-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50);
+}
+
+.body-container {
+    margin-top: 100px;
+}
+.header-container {
+    margin-top: 100px;
+}

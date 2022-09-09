@@ -1,0 +1,44 @@
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
+.Form-Page-Container {
+    height: 50vh;
+    display: grid;
+    place-items: center center;
+    background: black;
+}
+
+.Form-container {
+    display: flex;
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px 0;
+}
+
+.emc2-form {
+    place-items: center;
+    height: 3em;
+    width: 150px;
+    font-size: 1.1em;
+    border-radius: 0.5em;
+    border: 2px solid grey;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 2px 5px 0;
+}
+
+.emc2-form:hover {
+    box-shadow: 0 4px 10px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .Form-container {
+        margin-top: 90px;
+        width: 90%
+    }
+}

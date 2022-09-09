@@ -10,7 +10,7 @@ Follow these links for the front-end:
 [Website Link](https://cozy-gnome-816bc0.netlify.app/), 
 [Github Link](https://github.com/CPlusPLusPlusPluss/Front-End-Project-3)</br>
 and these links are for the back-end:
-[API Link](https://secret-waters-54413.herokuapp.com), 
+[API Link](http://localhost:1337), 
 [Github Link](https://github.com/CPlusPLusPlusPluss/Back-End-Project-3)</br> On each page, click on the green `Code` button and copy the link under the SSH tab.
 
 ### `git clone`
@@ -57,8 +57,8 @@ Runs the app in the development mode.
 
 ## Features and Description:
 
-- This application is a hotel employee portal to display, check in, check out, and update guest and room information in that hotel.
-- This application has get, create, update and delete functions for guest information, and get and update functions for room information. (full CRUD)
+- This application is a hotel employee portal to display, check in, check out, and update emc2 and room information in that hotel.
+- This application has get, create, update and delete functions for emc2 information, and get and update functions for room information. (full CRUD)
 - All information is stored in a mongodb database updates in real time.
 - This application is screen responsive so it works on most displays.
 

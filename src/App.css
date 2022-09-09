@@ -13,19 +13,23 @@
 }
 
 html {
-  background-color: white;
+  background-color: black;
   height: 100vh;
 }
 
 .nav-container {
   display: flex;
-  background: linear-gradient(rgba(44, 50, 56, 1) 0%, rgba(44, 50, 56, 1) 67%, rgba(44, 50, 56, 0.98) 71%, rgba(44, 50, 56, 0.95) 74%, rgba(44, 50, 56, 0.85) 81%, rgba(44, 50, 56, 0.75) 85%, rgba(44, 50, 56, 0.4) 94%, transparent 100%);
+  background: black;
   flex-direction: column;
   align-items: center;
   width: 100%;
   z-index: 500;
   height: 155px;
   position: fixed;
+}
+
+.navbar-light {
+  border-radius: none;
 }
 
 .link {
@@ -69,6 +73,27 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.fluid-container .container {
+  padding-top: 150px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: black;
+  border: 0 px solid black;
+}
+
+.nav-link {
+  width: 100px;
+}
+
+.btn {
+  width: 75px;
+  height: 25px;
 }
 
 @media screen and (max-width: 800px) {

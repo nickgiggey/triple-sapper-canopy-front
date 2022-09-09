@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.home-container3 {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.60)), rgba(255, 255, 255, 0.50);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 5px;
+    font-size: 5rem;
+    color: grey;
+    font-family: 'Cinzel', serif;
+    position: relative;
+}
+
+.home-section3 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    align-items: center;
+    position: relative;
+}
+
+.emc2-list-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 25px;
+    width: 100vw;
+    margin-right: 5%;
+    margin-left: 5%;
+    overflow-y: scroll;
+}
+
+.emc2-id {
+    text-align: left;
+    margin-right: 60%;
+    font-size: 75%;
+    font-weight: bold;
+    color: rgb(110, 54, 54);
+}
+
+.emc2-list {
+    text-align: left;
+    justify-content: center;
+    line-height: 100%;
+    width: 300px;
+    height: 180px;
+    font-size: 25%;
+    background-color: rgb(250, 233, 159, .65);
+    color: rgb(36, 36, 36);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 10px 0;
+}
+
+.emc2-innerText {
+    line-height: 125%;
+    font-size: 90%;
+}
+
+span {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.expand {
+    font-size: 14px;
+}
+
+.expand:hover {
+    cursor: hover
+}
+
+
+.emc2-button {
+    margin-top: 1%;
+    margin-left: 75%;
+    padding: 3%;
+    background-color: rgb(247, 234, 218, 0);
+    border-radius: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(126, 69, 69);
+    border-width: 2.25px;
+    border-color: rgb(23, 129, 223, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 55px;
+        font-family: 'Cinzel', serif;
+    }
+}
+
+.profile-container {
+    padding-top: 300px;
+    color: white;
+}
