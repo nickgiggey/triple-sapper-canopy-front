@@ -1,5 +1,5 @@
-# Hello and welcome to The Gitz Carlton
-<img width="2038" alt="Screen Shot" src="assets/frontpage.png">
+# Hello and welcome to Einstein
+<img width="2038" alt="Screen Shot" src="">
 
 Here you will find...
 
@@ -7,11 +7,11 @@ Here you will find...
 ### `Code`
 
 Follow these links for the front-end:
-[Website Link](https://cozy-gnome-816bc0.netlify.app/), 
-[Github Link](https://github.com/CPlusPLusPlusPluss/Front-End-Project-3)</br>
+[Website Link](), 
+[Github Link]()</br>
 and these links are for the back-end:
 [API Link](http://localhost:1337), 
-[Github Link](https://github.com/CPlusPLusPlusPluss/Back-End-Project-3)</br> On each page, click on the green `Code` button and copy the link under the SSH tab.
+[Github Link]()</br> On each page, click on the green `Code` button and copy the link under the SSH tab.
 
 ### `git clone`
 
@@ -57,10 +57,7 @@ Runs the app in the development mode.
 
 ## Features and Description:
 
-- This application is a hotel employee portal to display, check in, check out, and update emc2 and room information in that hotel.
-- This application has get, create, update and delete functions for emc2 information, and get and update functions for room information. (full CRUD)
-- All information is stored in a mongodb database updates in real time.
-- This application is screen responsive so it works on most displays.
+- This application...
 
 ## Contribution Guidelines:
 
@@ -68,7 +65,4 @@ If you would like to add any contributes, simply 'fork' the project on the Githu
 
 ### Credits: ###
 
-- Brandon Nguyen [Github Link](https://github.com/bdnkai)
-- James Stoppani [Github Link](https://github.com/JamesStop)
-- Meesum Ashary [Github Link](https://github.com/MeesumAshary)
 - Nick Giggey [Github Link](https://github.com/nickgiggey)
