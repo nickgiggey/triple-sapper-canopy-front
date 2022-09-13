@@ -1,11 +1,13 @@
 import './InitiateForm.css';
 import axios from 'axios';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
 function InitiateForm() {
+	const accessToken = 'Sapper';
 	let code = {
-		code: Math.floor(Math.random() * (50 - 5 + 1) * Math.PI + 5)
+		code: Math.floor(Math.random() * (50 - 5 + 1) * Math.PI + 5),
+		Authorization: [accessToken],
 	};
 
 	const navigate = useNavigate();
