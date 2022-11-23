@@ -11,9 +11,9 @@ class Status extends Component {
 	state = {
 		status: []
 	};
-	constructor() {
-		super();
-		this.getStatus();
+	constructor(code) {
+		super(code);
+		code = this.getStatus();
 	}
 
 	getStatus = async () => {
@@ -23,22 +23,30 @@ class Status extends Component {
 
 	createStatus = async () => {
 		let res = await api.post('/status', { id: 0 });
-		console.log(res);
+		console.log('res', res)
 		this.getStatus();
 	};
 
 	render() {
+		console.log('status', this.state.status.code)
 		return (
 			<section>
 				<div className='home-container3'>
 					<section className='home-section3'>
 						<span className="title">Status List</span>
 						<ul className='status-list-container'>
-							<h1>Hello</h1>
 						</ul>
 						<div className="status-container">
 							{/* <button className='status-button' onClick={this.createStatus}>Show Status</button> */}
-							{this.state.status.map(status => <li key={status.id}>{status.id}</li>)}
+							{this.state.status.map(status =>
+								<ul key={status.id}>
+									<br />
+									Authorization: {status.Authorization}
+									<br />
+									code: {status.code}
+									<br />
+								</ul>
+							)}
 						</div>
 					</section>
 				</div>
